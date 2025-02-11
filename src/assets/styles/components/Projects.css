@@ -1,0 +1,26 @@
+.projects-container,
+.group-project,
+.adventure-game,
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.tech-stack {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    list-style-type: disc;
+
+}
+
+.disabled {
+    font-style: italic;
+    color: grey;
+}
+
+img {
+    max-width: 500px;
+}

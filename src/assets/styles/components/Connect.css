@@ -1,0 +1,11 @@
+h3 {
+    color: var(--heading-color)
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    gap: 30px;
+    padding-bottom: 10px;
+}
