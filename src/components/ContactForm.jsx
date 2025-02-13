@@ -30,9 +30,7 @@ const ContactForm = () => {
 
       if (response.ok) {
         alert("Message was sent successfully!");
-        setUserName("");
-        setUserEmail("");
-        setUserMessage("");
+        setFormData({ name: "", email: "", message: "" });
       } else {
         console.error("Server response:", data);
         alert(`Error: ${data.message || "Failed to send message."}`);
