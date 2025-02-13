@@ -1,6 +1,4 @@
 footer {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    font-style: italic;
-    color: #4d5852;
+    margin: 30px;
+    color: rgb(60, 63, 82);
 }

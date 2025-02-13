@@ -23,13 +23,12 @@ const Projects = () => {
             <li>JavaScript</li>
             <li>React.js</li>
             <li>HTML & CSS</li>
-            <li className="disabled">C#</li>
-            <li className="disabled">ASP.NET</li>
+            <li>C#</li>
+            <li>ASP.NET</li>
             <li>Vitest</li>
             <li>xUnit</li>
             <li></li>
           </ul>
-          <legend className="disabled">Backend temporarily disabled</legend>
         </div>
         <div className="group-project">
           <h3>Executive Function Web App</h3>

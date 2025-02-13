@@ -14,11 +14,15 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --background-color: #F5F5DC; 
-  --font-color: #2E8B57; 
-  --link-color: #3CB371; 
-  --heading-color: #556B2F; 
-  --navbar-bg-color: #8FBC8F; 
+  --background-color: #E6F0FF; 
+  --font-color: #4A4E69;  
+  --link-color: #5E81AC;  
+  --heading-color: #3D5A80;  
+  --navbar-bg-color: #A3B8CC;  
+  --accent-color: #C9A7EB;
+  --button-color: #a57cce;
+  --button-hover: #8968aa;   
+  --highlight-color: #81C995; 
 }
 
 body {
@@ -29,10 +33,36 @@ body {
   min-height: 100vh;
 }
 
+h1, 
+h2, 
+h3, 
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--heading-color);
+  text-align: center;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+
 }
+
+h2 {
+  display: block;
+  text-align: center;
+  width: fit-content;
+  margin: 0 auto;
+  border-bottom: 3px solid var(--highlight-color);
+  padding-top: 50px;
+}
+
 
 @media (prefers-color-scheme: light) {
   :root {
