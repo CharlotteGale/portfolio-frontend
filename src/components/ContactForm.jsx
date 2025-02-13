@@ -34,6 +34,7 @@ const ContactForm = () => {
         setUserEmail("");
         setUserMessage("");
       } else {
+        console.error("Server response:", data);
         alert(`Error: ${data.message || "Failed to send message."}`);
       }
     } catch (error) {
