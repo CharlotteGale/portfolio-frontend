@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import emailjs from "@emailjs/browser";
 
 import "../assets/styles/components/ContactForm.css";
 
@@ -10,34 +9,37 @@ const ContactForm = () => {
     message: "",
   });
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (event) => {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
 
-    emailjs
-      .send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        formData,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-      )
-      .then((response) => {
-        console.log("Success!", response.status, response.text);
-        alert("Message sent successfully!");
-
-        setFormData({
-          name: "",
-          email: "",
-          message: "",
-        })
-      })
-      .catch((error) => {
-        console.error("Failed...", error);
-        alert("Failed to send message :[ ");
+    try {
+      const response = await fetch("http://0.0.0.0:10000/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
       });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert("Message was sent successfully!");
+        setUserName("");
+        setUserEmail("");
+        setUserMessage("");
+      } else {
+        alert(`Error: ${data.message || "Failed to send message."}`);
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("There was a problem sending your message.")
+    }
   };
 
   return (

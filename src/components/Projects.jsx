@@ -13,7 +13,7 @@ const Projects = () => {
         <div className="portfolio">
           <h3>My Portfolio Web Page</h3>
           <img src={portfolio} alt="my portfolio webpage" />
-          <caption>This is my portfolio webpage</caption>
+          <legend>This is my portfolio webpage</legend>
           <p>
             A webpage designed to display the full breadth of my skills learned
             both during the CFG Bootcamp and through my self-learning journey.
@@ -34,7 +34,7 @@ const Projects = () => {
         <div className="group-project">
           <h3>Executive Function Web App</h3>
           <img src={groupProject} alt="landing page for ChakraX" />
-          <caption>An executive function web app.</caption>
+          <legend>An executive function web app.</legend>
           <p>
             A support tool designed to assist neurodivergent users in managing
             daily tasks and building healthy habits.
@@ -54,9 +54,9 @@ const Projects = () => {
         <div className="adventure-game">
           <h3>Text-Based Adventure Game</h3>
           <img src={gameImage} alt="landing page for text adventure" />
-          <caption>
+          <legend>
             A D&D inspired text-based adventure game, Work In Progress
-          </caption>
+          </legend>
           <p>
             This simple text-based game allows the player to choose from 1 of 4
             adventures, 3 of which are complete.
