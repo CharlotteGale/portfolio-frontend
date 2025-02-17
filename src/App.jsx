@@ -1,14 +1,10 @@
-import { useState } from 'react';
-import Header from './components/Header.jsx';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Navbar from './components/Navbar.jsx';
-import BannerImage from './components/BannerImage.jsx';
-import About from './components/About.jsx';
-import Projects from './components/Projects.jsx';
-import Languages from './components/Languages.jsx';
-import Tools from './components/Tools.jsx';
-import Contact from './components/ContactForm.jsx';
-import Connect from './components/Connect.jsx';
-import Footer from './components/Footer.jsx';
+import Home from './pages/Home.jsx';
+import About from './pages/About.jsx';
+import Projects from './pages/Projects.jsx';
+import Contact from './pages/Contact.jsx';
 
 import './assets/styles/index.css';
 import './assets/styles/App.css';
@@ -20,17 +16,14 @@ const App = () => {
     <div className='app-container'>
       <Navbar />
       <main className='main-content'>
-        <Header />
-        <BannerImage />
-        <About />
-        <Projects />
-        <Languages />
-        <Tools />
-        <Contact />
-        <Connect />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/projects' element={<Projects />} />
+          <Route path='/contact' element={<Contact />} />
+        </Routes>
         <Footer />
       </main>
-      
     </div>
   )
 }
