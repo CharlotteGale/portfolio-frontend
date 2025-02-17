@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../assets/styles/components/Languages.css";
+import "../assets/styles/components/Technologies.css";
 
 const Languages = () => {
   return (

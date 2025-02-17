@@ -1,0 +1,19 @@
+#skills {
+    text-align: center;
+    padding: 20px;
+}
+
+#skills h2 {
+    border-bottom: 3px solid var(--highlight-color);
+    width: fit-content;
+    margin: 0 auto 20px;
+}
+
+#skills p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+#skills section {
+    margin-bottom: 30px;
+}
