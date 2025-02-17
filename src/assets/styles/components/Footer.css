@@ -1,4 +1,11 @@
 footer {
-    margin: 30px;
-    color: rgb(60, 63, 82);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 6vh;
+    margin-top: 30px;
+    color: rgb(163, 184, 204);
+    background-color: rgb(60, 63, 82);
+    align-content: center;
 }
