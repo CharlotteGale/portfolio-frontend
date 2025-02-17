@@ -23,7 +23,7 @@ const ProjectCard = ({
 
             {isExpanded && (
                 <div className="project-details">
-                    <p>{description}</p>
+                    <p className="justified-text">{description}</p>
 
                     {[
                         { heading: subheading1, content: subcontent1 },
@@ -35,7 +35,7 @@ const ProjectCard = ({
                             <div key={index}>
                                 <h4>{section.heading}</h4>
                                 {Array.isArray(section.content) ? (
-                                    <ul>
+                                    <ul className="subcontent-list">
                                         {section.content.map((item, idx) => <li key={idx}>{item}</li>)}
                                     </ul>
                                 ) : (
@@ -44,7 +44,7 @@ const ProjectCard = ({
                             </div>
                         ) : null
                     ))}
-                    <p>{summary}</p>
+                    <p className="justified-text">{summary}</p>
                     {techStack.length > 0 && (
                         <>
                             <h4>Tech Stack</h4>

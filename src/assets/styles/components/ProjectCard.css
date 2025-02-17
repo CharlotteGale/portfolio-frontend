@@ -1,0 +1,42 @@
+.project-card > * {
+    margin-bottom: 10px;
+}
+
+.project-card > *:last-child {
+    margin-bottom: 0;
+}
+
+.project-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.subcontent-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sub-content-list li {
+    text-align: justify;
+    margin-bottom: 5px;
+}
+
+.justified-text,
+.subcontent-list {
+    text-align: justify;
+}
+
+.project-card button {
+    padding: 3px;
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.project-card button:hover {
+    background-color: var(--button-hover);
+}

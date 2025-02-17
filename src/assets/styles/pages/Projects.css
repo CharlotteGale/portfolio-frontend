@@ -1,13 +1,8 @@
-.projects-container,
-.group-project,
-.adventure-game,
-.portfolio {
+.projects-container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     padding: 20px;
-    justify-content: center;
-    align-items: center;
 }
 
 .tech-stack {
@@ -15,12 +10,6 @@
     justify-content: center;
     gap: 25px;
     list-style-type: disc;
-
-}
-
-.disabled {
-    font-style: italic;
-    color: grey;
 }
 
 img {
