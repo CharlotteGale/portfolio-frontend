@@ -8,6 +8,7 @@ const ContactForm = () => {
     email: "",
     message: "",
   });
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (event) => {
     setFormData({
@@ -18,9 +19,13 @@ const ContactForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setIsLoading(true);
 
     try {
-      const response = await fetch("https://portfolio-backend-htjt.onrender.com/api/contact", {
+
+      // const proxyUrl = "https://thingproxy.freeboard.io/fetch/"; /* local testing only */
+      const apiUrl = "https://portfolio-backend-htjt.onrender.com/api/contact"
+      const response = await fetch(apiUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -39,6 +44,8 @@ const ContactForm = () => {
       console.error("Error sending message:", error);
       alert("There was a problem sending your message.")
     }
+
+    setIsLoading(false);
   };
 
   return (
@@ -74,7 +81,42 @@ const ContactForm = () => {
             required
           />
         </label>
-        <button type="submit">Send</button>
+        <button
+          type="submit"
+          disabled={isLoading}
+          className={`mt-6 w-full min-w-[140px] px-4 py-3 rounded-lg font-bold transition-all flex justify-center items-center ${isLoading
+              ? "bg-gray-400 cursor-not-allowed"
+              : "bg-blue-500 hover:bg-blue-600 text-white"
+            }`}
+        >
+          {isLoading ? (
+            <div className="flex items-center gap-3">
+              <svg
+                className="animate-spin h-5 w-5 text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                ></circle>
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8v4l3-3-3-3v4a8 8 0 11-8 8h4l-3 3 3 3v-4z"
+                ></path>
+              </svg>
+              Sending...
+            </div>
+          ) : (
+            "Send"
+          )}
+        </button>
       </form>
     </>
   );
