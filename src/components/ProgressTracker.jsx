@@ -7,7 +7,6 @@ const inProgressCerts = [
 export default function ProgressTracker() {
     return (
         <div className='max-w-md mx-auto mt-8'>
-            <h2 className='text-xl font-bold mb-4'>In Progress Certifications</h2>
             {inProgressCerts.map((cert, index) => (
                 <div key={index} className='mb-4'>
                     <p className='text-sm font-medium'>{cert.title}</p>
