@@ -4,7 +4,7 @@ import '../assets/styles/pages/About.css';
 const About = () => {
     return (
         <section id='about'>
-            <h2>About Me</h2>
+            <h1>About Me</h1>
             <section className='about-section'>
                 <p>
                     Hello! I am a passionate and dedicated Junior Web Developer with a strong foundation in fullstack development.

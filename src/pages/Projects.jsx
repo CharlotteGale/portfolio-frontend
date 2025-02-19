@@ -9,7 +9,7 @@ import "../assets/styles/pages/Projects.css";
 const Projects = () => {
   return (
     <section id="projects">
-      <h2>Projects</h2>
+      <h1>Projects</h1>
       <div className="projects-container">
         <ProjectCard
           title="My Portfolio Web Page"
