@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
 
+import '../assets/styles/components/Certifications.css'
+
 const certifications = [
     {
         title: "Foundational C# with Microsoft",
@@ -13,14 +15,14 @@ const certifications = [
         title: "Intro to Cloud Computing",
         issuer: "Codecademy",
         date: "January 2025",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/a/ab/Codecademy_logo.svg",
+        logo: "/codecademy-logo.png",
         link: "https://www.codecademy.com/profiles/CharlotteMGale/certificates/1353857e7ad5c1d0d578073e0d5e31e4"
     },
     {
         title: "Introduction to DevOps",
         issuer: "Codecademy",
         date: "January 2025",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/a/ab/Codecademy_logo.svg",
+        logo: "/codecademy-logo.png",
         link: "https://www.codecademy.com/profiles/CharlotteMGale/certificates/735b5f3bb39d4b8bbe48ac00de0e7222"
     },
     {
@@ -41,7 +43,7 @@ const certifications = [
         title: "TypeScript Fundamentals",
         issuer: "Codecademy",
         date: "December 2024",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/a/ab/Codecademy_logo.svg",
+        logo: "/codecademy-logo.png",
         link: "https://www.codecademy.com/profiles/CharlotteMGale/certificates/d74421b4615249039756ea358748f532"
     },
     // {
@@ -58,29 +60,28 @@ const CertificationCard = ({ cert }) => {
 
     return (
         <motion.div
-            className='relative w-64 h-40 cursor-pointer perspective'
-            onClick={() => setFlipped(!flipped)}
+            className='card-container'
+            onClick={() => setFlipped((prev) => !prev)}
         >
             <motion.div
-                className='absolute w-full h-full rounded-2xl shadow-lg transition-transform duration-500'
+                className='card'
                 animate={{ rotateY: flipped ? 180 : 0 }}
-                style={{ transformStyle: "preserve-3d" }}
             >
                 {/* Front Side */}
-                <div className="absolute w-full h-full flex flex-col items-center justify-center bg-blue-500 text-white rounded-2xl backface-hidden z-10">
-                    <img src={cert.logo} alt={cert.title} className="w-16 h-16 mb-2" />
-                    <h3 className='text-lg font-bold'>{cert.title}</h3>
-                    <p className='text-sm'>{cert.issuer}</p>
+                <div className='card-front'>
+                    <img src={cert.logo} alt={cert.issuer} className='card-img' />
+                    <h3 className='card-title'>{cert.title}</h3>
+                    <p className='card-issuer'>{cert.issuer}</p>
                 </div>
 
                 {/* Back Side */}
-                <div className="absolute w-full h-full flex flex-col items-center justify-center bg-gray-800 text-white rounded-2xl backface-visible transform rotateY-180 z-0">
-                    <p className='text-sm'>Issued: {cert.date}</p>
+                <div className='card-back'>
+                    <p className='card-date'>Issued: {cert.date}</p>
                     <a
                     href={cert.link}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='mt-2 text-blue-300 underline'
+                    className='card-link'
                     >
                         View Certificate
                     </a>
