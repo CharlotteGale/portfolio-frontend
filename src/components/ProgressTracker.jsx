@@ -1,7 +1,7 @@
 import React from 'react'
 
 const inProgressCerts = [
-    { title: "Front End Development Libraries", progress: 0 }
+    { title: "Front End Development Libraries", progress: 10 }
 ]
 
 export default function ProgressTracker() {

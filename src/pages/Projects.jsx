@@ -1,5 +1,5 @@
 import React from "react";
-import ProjectCard from "../components/ProjectCard";
+import ProjectCard from "../components/ProjectCard.jsx";
 import gameImage from "../assets/images/text-adventure.png";
 import groupProject from "../assets/images/chakraX-homePage.png";
 import portfolio from "../assets/images/portfolio.png";
