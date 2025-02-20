@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "../assets/styles/components/ContactForm.css";
 
 const ContactForm = () => {
+  const [isDisabled, setIsDisabled] = useState(true);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -51,73 +52,78 @@ const ContactForm = () => {
   return (
     <>
       <h2 id="contact">Contact Me</h2>
-      <form className="contact-form" onSubmit={handleSubmit}>
-        <label>
-          Name:
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <label>
-          Email:
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <label>
-          Message:
-          <textarea
-            value={formData.message}
-            name="message"
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <button
-          type="submit"
-          disabled={isLoading}
-          className={`mt-6 w-full min-w-[140px] px-4 py-3 rounded-lg font-bold transition-all flex justify-center items-center ${isLoading
+      
+      {isDisabled ? (
+        <p>The contact form is temporarily unavailable. Please try again later.</p>
+      ) : (
+        <form className="contact-form" onSubmit={handleSubmit}>
+          <label>
+            Name:
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+          </label>
+          <label>
+            Email:
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+          </label>
+          <label>
+            Message:
+            <textarea
+              value={formData.message}
+              name="message"
+              onChange={handleChange}
+              required
+            />
+          </label>
+          <button
+            type="submit"
+            disabled={isLoading}
+            className={`mt-6 w-full min-w-[140px] px-4 py-3 rounded-lg font-bold transition-all flex justify-center items-center ${isLoading
               ? "bg-gray-400 cursor-not-allowed"
               : "bg-blue-500 hover:bg-blue-600 text-white"
-            }`}
-        >
-          {isLoading ? (
-            <div className="flex items-center gap-3">
-              <svg
-                className="animate-spin h-5 w-5 text-white"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <circle
-                  className="opacity-25"
-                  cx="12"
-                  cy="12"
-                  r="10"
-                  stroke="currentColor"
-                  strokeWidth="4"
-                ></circle>
-                <path
-                  className="opacity-75"
-                  fill="currentColor"
-                  d="M4 12a8 8 0 018-8v4l3-3-3-3v4a8 8 0 11-8 8h4l-3 3 3 3v-4z"
-                ></path>
-              </svg>
-              Sending...
-            </div>
-          ) : (
-            "Send"
-          )}
-        </button>
-      </form>
+              }`}
+          >
+            {isLoading ? (
+              <div className="flex items-center gap-3">
+                <svg
+                  className="animate-spin h-5 w-5 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  ></circle>
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8v4l3-3-3-3v4a8 8 0 11-8 8h4l-3 3 3 3v-4z"
+                  ></path>
+                </svg>
+                Sending...
+              </div>
+            ) : (
+              "Send"
+            )}
+          </button>
+        </form>
+      )};
     </>
   );
 };
