@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import emailjs from '@emailjs/browser'
 
 import "../assets/styles/components/ContactForm.css";
 
 const ContactForm = () => {
-  const [isDisabled, setIsDisabled] = useState(true);
+  const [isDisabled, setIsDisabled] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -24,7 +25,28 @@ const ContactForm = () => {
 
     try {
 
-      // const proxyUrl = "https://thingproxy.freeboard.io/fetch/"; /* local testing only */
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const userId = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+      const response = await emailjs.send (
+        serviceId,
+        templateId,
+        formData,
+        userId
+      );
+
+      if (response.status === 200) {
+        alert("Message was sent successfully!");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        console.error("Server response:", response);
+        alert(`Error: ${response.text || "Failed to send message."}`)
+      }
+
+
+      /*
+      // const proxyUrl = "https://thingproxy.freeboard.io/fetch/"; // local testing only
       const apiUrl = "https://portfolio-backend-htjt.onrender.com/api/contact"
       const response = await fetch(apiUrl, {
         method: "POST",
@@ -41,18 +63,22 @@ const ContactForm = () => {
         console.error("Server response:", data);
         alert(`Error: ${data.message || "Failed to send message."}`);
       }
+    */
+    
     } catch (error) {
       console.error("Error sending message:", error);
       alert("There was a problem sending your message.")
     }
-
+    
     setIsLoading(false);
   };
+
+
 
   return (
     <>
       <h2 id="contact">Contact Me</h2>
-      
+
       {isDisabled ? (
         <p>The contact form is temporarily unavailable. Please try again later.</p>
       ) : (
