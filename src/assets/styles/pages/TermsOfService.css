@@ -1,0 +1,23 @@
+.terms-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 90px;
+    text-align: justify;
+}
+
+.centered {
+    text-align: center;
+}
+
+.update {
+    font-size: 0.875rem;
+}
+
+.terms-container ul {
+    list-style-type: disc;
+    padding-left: 50px;
+}

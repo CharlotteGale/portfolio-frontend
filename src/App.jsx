@@ -8,6 +8,8 @@ import Skills from './pages/Skills.jsx';
 import Academics from './pages/Academics.jsx';
 import Contact from './pages/Contact.jsx';
 import Footer from './components/Footer.jsx';
+import PrivacyPolicy from './pages/PrivacyPolicy.jsx';
+import TermsOfService from './pages/TermsOfService.jsx';
 
 import './assets/styles/index.css';
 import './assets/styles/App.css';
@@ -25,6 +27,8 @@ const App = () => {
           <Route path='/skills' element={<Skills />} />
           <Route path='/academics' element={<Academics />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+          <Route path='/terms-of-service' element={<TermsOfService />} />
         </Routes>
         <Footer />
       </main>
