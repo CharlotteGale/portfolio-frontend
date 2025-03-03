@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-// import emailjs from '@emailjs/browser';
+import emailjs from '@emailjs/browser';
 
 import "../assets/styles/components/ContactForm.css";
 
 const ContactForm = () => {
-  const [isDisabled, setIsDisabled] = useState(true);
+  const [isDisabled, setIsDisabled] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -24,7 +24,7 @@ const ContactForm = () => {
     setIsLoading(true);
 
     try {
-      /*
+
       const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
       const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
       const userId = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
@@ -43,13 +43,17 @@ const ContactForm = () => {
         console.error("Server response:", response);
         alert(`Error: ${response.text || "Failed to send message."}`)
       }
-      */
 
+      /*
       // const proxyUrl = "https://thingproxy.freeboard.io/fetch/"; // local testing only
-      const apiUrl = "https://portfolio-backend-htjt.onrender.com/api/contact"
+      const apiUrl = "http://localhost:5000/api/contact"
+      // const apiUrl = "https://portfolio-backend-htjt.onrender.com/api/contact"
       const response = await fetch(apiUrl, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { 
+          "Content-Type": "application/json",
+          // "Origin": "https://charlottegale.dev"
+        },
         body: JSON.stringify(formData),
       });
 
@@ -59,10 +63,11 @@ const ContactForm = () => {
         alert("Message was sent successfully!");
         setFormData({ name: "", email: "", message: "" });
       } else {
-        console.error("Server response:", data);
-        alert(`Error: ${data.message || "Failed to send message."}`);
+        const errorText = await response.text();
+        console.error("Server response:", response.status, errorText);
+        throw new Error(`HTTP error ${response.status}: ${errorText}`);
       }
-    
+      */
     } catch (error) {
       console.error("Error sending message:", error);
       alert("There was a problem sending your message.")
@@ -71,6 +76,9 @@ const ContactForm = () => {
     setIsLoading(false);
   };
 
+  // testing environment uri = "http://localhost:5000/oauth2callback"
+// deployment environment uri = "https://portfolio-backend-htjt.onrender.com/api/contact/oauth2callback"
+/*
   const handleOAuth2Callback = async () => {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
@@ -78,22 +86,15 @@ const ContactForm = () => {
 
     if (code) {
       try {
-        const apiUrl = "https://portfolio-backend-htjt.onrender.com/api/contact/oauth2callback";
-        const response = await fetch(`${apiUrl}?code=${code}`, {
-          method: 'GET',
-        });
+        const redirectUri = "http://localhost:5000/oauth2callback";
+        const clientId = import.meta.env.VITE_OAUTH_CLIENT_ID;
+        const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&scope=email`;
+        
+        window.location.href = authUrl;
 
-        const data = await response.json();
-
-        if (response.ok) {
-          alert('OAuth authentication successful!');
-        } else {
-          console.error('Server response:', data);
-          alert(`Error: ${data.message || 'OAuth2 authentication failed.'}`);
-        }
       } catch (error) {
-        console.error('Error during OAuth2 callback:', error);
-        alert('There was a problem during OAuth2 authentication.');
+        console.error('Error initiating OAuth2:', error);
+        alert('There was a problem with the OAuth2 process.');
       }
     }
   };
@@ -101,6 +102,7 @@ const ContactForm = () => {
   useEffect(() => {
     handleOAuth2Callback();
   }, []);
+  */
 
   return (
     <>

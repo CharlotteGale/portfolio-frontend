@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import '../assets/styles/components/Certifications.css'
 
 const certifications = [
+    // C#
     {
         title: "Foundational C# with Microsoft",
         issuer: "freeCodeCamp",
@@ -11,6 +12,10 @@ const certifications = [
         logo: "https://design-style-guide.freecodecamp.org/img/fcc_primary_small.svg",
         link: "https://freecodecamp.org/certification/fcc89e104bf-2b35-4b23-a9af-bd8d056821be/foundational-c-sharp-with-microsoft"
     },
+
+    // Python
+
+    // DevOps
     {
         title: "Intro to Cloud Computing",
         issuer: "Codecademy",
@@ -26,6 +31,15 @@ const certifications = [
         link: "https://www.codecademy.com/profiles/CharlotteMGale/certificates/735b5f3bb39d4b8bbe48ac00de0e7222"
     },
     {
+        title: "Working with Containers",
+        issuer: "Codecademy",
+        date: "February 2025",
+        logo: "/codecademy-logo.png",
+        link: "https://www.codecademy.com/profiles/CharlotteMGale/certificates/e9df20fe45914876802069da07f6bfe4"
+    },
+
+    // JavaScript & JS libraries/frameworks
+    {
         title: "JavaScript Algorithms and Data Structures",
         issuer: "freeCodeCamp",
         date: "January 2025",
@@ -39,6 +53,8 @@ const certifications = [
         logo: "https://codefirstgirls.com/wp-content/uploads/2021/04/White-Code-First-Girls-Logo-Transparent-1024x1024.png", // replace with actual logo
         link: "https://drive.google.com/file/d/1zJW3s-vHGKlLMnknr67fXfRZR7jZv7jS/view?usp=sharing" // the certificate
     },
+
+    // TypeScript
     {
         title: "TypeScript Fundamentals",
         issuer: "Codecademy",
@@ -46,6 +62,26 @@ const certifications = [
         logo: "/codecademy-logo.png",
         link: "https://www.codecademy.com/profiles/CharlotteMGale/certificates/d74421b4615249039756ea358748f532"
     },
+    
+    {
+        title: "TypeScript Functions",
+        issuer: "Codecademy",
+        date: "February 2025",
+        logo: "/codecademy-logo.png",
+        link: "hhttps://www.codecademy.com/profiles/CharlotteMGale/certificates/4e7826b0c9a343178a5b998322d1616c"
+    },
+    {
+        title: "TypeScript Complex Types",
+        issuer: "Codecademy",
+        date: "February 2025",
+        logo: "/codecademy-logo.png",
+        link: "https://www.codecademy.com/profiles/CharlotteMGale/certificates/034d7778456644ffb78ed5e774f33603"
+    },
+
+    // Data Science
+
+    // QA
+
     // {
     //     title: "",
     //     issuer: "",
