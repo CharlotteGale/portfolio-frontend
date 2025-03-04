@@ -35,7 +35,8 @@
   --button-hover: #8968aa;   
   --highlight-color: #81C995; 
   --card-color: #A1C0D1;
-  --card-bg-color: #7A4F91 ;
+  --card-bg-color: #7A4F91;
+  --progress-card-color: #9ecde7e7;
 }
 
 body {
