@@ -79,6 +79,13 @@ const certifications = [
     },
 
     // Data Science
+    {
+        title: "Learn MongoDB",
+        issuer: "Codecademy",
+        date: "March 2025",
+        logo: "/codecademy-logo.png",
+        link: "https://www.codecademy.com/profiles/CharlotteMGale/certificates/808a989d563e4e85ba3495d4d14dce5d"
+    },
 
     // QA
 
