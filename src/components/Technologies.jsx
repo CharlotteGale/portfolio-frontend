@@ -90,6 +90,18 @@ const Languages = () => {
             height="40"
           />
         </a>
+        <a
+          href="https://tiswww.case.edu/php/chet/bash/bashtop.html"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/bash/bash-original.svg"
+            alt="Bash"
+            width="40"
+            height="40"
+          />
+        </a>
       </div>
 
       <h2>Frameworks & Libraries</h2>

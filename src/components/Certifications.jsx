@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 
 import '../assets/styles/components/Certifications.css'
 
-const certifications = [
-    // C#
+const csharpCerts = [
     {
         title: "Foundational C# with Microsoft",
         issuer: "freeCodeCamp",
@@ -12,10 +11,9 @@ const certifications = [
         logo: "https://design-style-guide.freecodecamp.org/img/fcc_primary_small.svg",
         link: "https://freecodecamp.org/certification/fcc89e104bf-2b35-4b23-a9af-bd8d056821be/foundational-c-sharp-with-microsoft"
     },
+];
 
-    // Python
-
-    // DevOps
+const devOpsCerts = [
     {
         title: "Intro to Cloud Computing",
         issuer: "Codecademy",
@@ -37,8 +35,16 @@ const certifications = [
         logo: "/codecademy-logo.png",
         link: "https://www.codecademy.com/profiles/CharlotteMGale/certificates/e9df20fe45914876802069da07f6bfe4"
     },
+    {
+        title: "Learn Bash Scripting",
+        issuer: "Codecademy",
+        date: "March 2025",
+        logo: "/codecademy-logo.png",
+        link: "https://www.codecademy.com/profiles/CharlotteMGale/certificates/37c55263a9f1b1f7603f7551c293ecbd"
+    },
+];
 
-    // JavaScript & JS libraries/frameworks
+const javascriptCerts = [
     {
         title: "JavaScript Algorithms and Data Structures",
         issuer: "freeCodeCamp",
@@ -53,8 +59,9 @@ const certifications = [
         logo: "https://codefirstgirls.com/wp-content/uploads/2021/04/White-Code-First-Girls-Logo-Transparent-1024x1024.png", // replace with actual logo
         link: "https://drive.google.com/file/d/1zJW3s-vHGKlLMnknr67fXfRZR7jZv7jS/view?usp=sharing" // the certificate
     },
+];
 
-    // TypeScript
+const typescriptCerts = [
     {
         title: "TypeScript Fundamentals",
         issuer: "Codecademy",
@@ -77,8 +84,9 @@ const certifications = [
         logo: "/codecademy-logo.png",
         link: "https://www.codecademy.com/profiles/CharlotteMGale/certificates/034d7778456644ffb78ed5e774f33603"
     },
+];
 
-    // Data Science
+const dataScienceCerts = [
     {
         title: "Learn MongoDB",
         issuer: "Codecademy",
@@ -86,17 +94,15 @@ const certifications = [
         logo: "/codecademy-logo.png",
         link: "https://www.codecademy.com/profiles/CharlotteMGale/certificates/808a989d563e4e85ba3495d4d14dce5d"
     },
+];
 
-    // QA
-
-    // {
-    //     title: "",
-    //     issuer: "",
-    //     date: "",
-    //     logo: "",
-    //     link: ""
-    // },
-]
+const allCategories = [
+    { title: "C#", certs: csharpCerts },
+    { title: "DevOps", certs: devOpsCerts },
+    { title: "JavaScript", certs: javascriptCerts },
+    { title: "TypeScript", certs: typescriptCerts },
+    { title: "Data Science", certs: dataScienceCerts }
+];
 
 const CertificationCard = ({ cert }) => {
     const [flipped, setFlipped] = useState(false);
@@ -135,12 +141,18 @@ const CertificationCard = ({ cert }) => {
 };
 
 export default function Certifications() {
-
     return (
-        <div className='flex flex-wrap gap-6 justify-center'>
-            {certifications.map((cert, index) => (
-                <CertificationCard key={index} cert={cert} />
+        <div className='flex flex-col gap-8 justify-center'>
+            {allCategories.map((category, index) => (
+                <div key={index}>
+                    <h2 className='text-xl font-semibold text-center' style={{ marginBottom: "12px" }} >{category.title}</h2>
+                    <div className='flex flex-wrap gap-6 justify-center'>
+                        {category.certs.map((cert, certIndex) => (
+                            <CertificationCard key={certIndex} cert={cert} />
+                        ))}
+                    </div>
+                </div>
             ))}
         </div>
-    )
+    );
 }
