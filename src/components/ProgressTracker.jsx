@@ -1,7 +1,7 @@
 import React from 'react';
 
 const inProgressCerts = [
-    { title: "Learn Python 3", progress: 64},
+    { title: "Learn Python 3", progress: 85},
     { title: "Front End Development Libraries", progress: 43 },
     { title: "Learning Playwright", progress: 30 },
     { title: "Learn Bash Scripting", progress: 100 },
