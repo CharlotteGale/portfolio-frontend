@@ -71,6 +71,18 @@ const Tools = () => {
             height="40"
           />
         </a>
+        <a
+          href="https://www.jetbrains.com/pycharm/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/pycharm/pycharm-original.svg"
+            alt="PyCharm"
+            width="40"
+            height="40"
+          />
+        </a>
 
       </div>
     </section>

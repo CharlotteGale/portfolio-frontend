@@ -7,22 +7,30 @@ const About = () => {
             <h1>About Me</h1>
             <section className='about-section'>
                 <p>
-                    Hello! I am a passionate and dedicated Junior Web Developer with a strong foundation in fullstack development.
-                    I recently completed a 16-week intensive coding bootcamp with Code First Girls, where I honed my skills in JavaScript, Node.js, and React.js, achieving a Merit.
-                    My journey into web development has been driven by a love for problem-solving and a desire to create user-centric applications that make a difference.
+                    Hello! I’m a Junior Full‑Stack Developer who thrives on building end‑to‑end web applications and crafting robust, secure APIs. 
+                    After earning a Merit at Code First Girls’ 16‑week intensive bootcamp, I’ve become fluent in JavaScript (Node.js, React), Python, and the essential tools—Git/GitHub, Postman, Jest and Figma—that keep my code clean, tested, and user‑friendly.
+                </p>
+                <br></br>
+                <p><b><u>Key Highlights</u></b></p>
+                <ul>
+                    <li>
+                        <b>Backend/API Development:</b> I have real passion for designing and implementing scalable RESTful services. 
+                    At CFG I architected the authentication API for an Executive Function Support Tool—secure login, JWT, bcrypt, data validation—and loved every minute of it.
+                    </li>
+                    <li>
+                        <b>Full‑Stack Projects:</b> I enjoy the full spectrum, from database schema to responsive UI. 
+                        I’m currently developing a text‑based RPG using JavaScript and Python, putting my newly minted Python skills to work—and having fun along the way.
+                    </li>
+                    <li>
+                        <b>Continuous Learning:</b> Beyond coding bootcamps, I’ve earned Microsoft’s Foundational C# certification and am diving into Cloud Computing & DevOps—containerization, CI/CD pipelines, Infrastructure as Code to round out my skill set.
+                    </li>
+                </ul>
+                <br></br>
+                <p>
+                    My drive is solving real problems through software: building delightful user experiences, securing and optimizing backends, and automating the processes that keep applications running smoothly.
                 </p>
                 <p>
-                    During my time studying with CFG, I had the opportunity to work on an exciting group project.
-                    Myself and 5 colleagues developed an executive function support tool designed to assist neurodivergent users in managing daily tasks and building healthy habits.
-                    I personally built the authentication API for this project, enabling secure user login and data management through RESTful endpoints. 
-                    This experience deepened my love for backend development and reinforced my commitment to creating secure and efficient applications.<br />
-                    I picked up many skills during the bootcamp, learning Version Control with Git & GitHub, API testing with Postman, Test-Driven Development with Jest. UI/UX design with Figma.<br />
-                    A lot of knowledge was crammed into those 16 weeks and it is an experience I was grateful to have.
-                </p>
-                <p>
-                    After completing the bootcamp and taking a well-deserved but brief rest, I dove back into learning.<br />
-                    I have recently passed the examination to claim my certification in Foundational C# with Microsoft, and now exploring Cloud Computing and DevOps through online learning platforms.
-                    My ultimate goal is to become a Software Development Engineer in Test, combining my growing passion for automation with my development skills to ensure the highest quality software products.
+                    Let’s connect and build something impactful!
                 </p>
             </section>
         </section>

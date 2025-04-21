@@ -44,7 +44,18 @@ const Languages = () => {
             height="40"
           />{" "}
         </a>
-
+        <a
+          href="https://www.python.org/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/python/python-original.svg"
+            alt="Python"
+            width="40"
+            height="40"
+          />
+        </a>
         <a href="https://www.mysql.com/" target="_blank" rel="noreferrer">
           {" "}
           <img
@@ -102,6 +113,7 @@ const Languages = () => {
             height="40"
           />
         </a>
+        
       </div>
 
       <h2>Frameworks & Libraries</h2>
@@ -161,7 +173,7 @@ const Languages = () => {
         </a>
         <a href="https://vitest.dev/" target="_blank" rel="noreferrer">
           <img
-            src="https://vitest.dev/logo.svg"
+            src="https://vitest.dev/logo-shadow.svg"
             alt="Vitest"
             width="40"
             height="40"

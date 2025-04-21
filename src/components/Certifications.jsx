@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m, motion } from 'framer-motion';
 import React, { useState } from 'react';
 
 import '../assets/styles/components/Certifications.css'
@@ -86,6 +86,16 @@ const typescriptCerts = [
     },
 ];
 
+const pythonCerts = [
+    {
+        title: "Learn Python 3",
+        issuer: "Codecademy",
+        date: "April 2025",
+        logo: "/codecademy-logo.png",
+        link: "https://www.codecademy.com/profiles/CharlotteMGale/certificates/6c152bd262967f8c941c9707ed636bda"
+    }
+]
+
 const dataScienceCerts = [
     {
         title: "Learn MongoDB",
@@ -101,6 +111,7 @@ const allCategories = [
     { title: "DevOps", certs: devOpsCerts },
     { title: "JavaScript", certs: javascriptCerts },
     { title: "TypeScript", certs: typescriptCerts },
+    { title: "Python", certs: pythonCerts },
     { title: "Data Science", certs: dataScienceCerts }
 ];
 
