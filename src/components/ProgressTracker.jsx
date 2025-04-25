@@ -2,7 +2,7 @@ import React from 'react';
 
 const inProgressCerts = [
     { title: "Front End Development Libraries", progress: 43 },
-    { title: "Learning Playwright", progress: 30 },
+    { title: "Building Web Apps with Django", progress: 15 },
     { title: "Learn Python 3", progress: 100},
     { title: "Learn Bash Scripting", progress: 100 },
     { title: "Learn MongoDB", progress: 100 }
