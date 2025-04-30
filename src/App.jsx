@@ -17,7 +17,6 @@ import './assets/styles/App.css';
 const App = () => {
 
   return (
-    <BrowserRouter>
       <div className='app-container'>
         <Navbar />
         <main className='main-content'>
@@ -34,7 +33,6 @@ const App = () => {
           <Footer />
         </main>
       </div>
-    </BrowserRouter>
   )
 }
 
