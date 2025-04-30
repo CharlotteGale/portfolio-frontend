@@ -3,6 +3,7 @@ import ProjectCard from "../components/ProjectCard.jsx";
 import gameImage from "../assets/images/text-adventure.png";
 import groupProject from "../assets/images/chakraX-homePage.png";
 import portfolio from "../assets/images/portfolio.png";
+import lostEmber from '../assets/images/lost-ember-image.png';
 
 import "../assets/styles/pages/Projects.css";
 
@@ -42,6 +43,37 @@ const Projects = () => {
           ]}
           summary="Building this portfolio has been a rewarding journey, combining my backend knowledge with new frontend skills, resulting in a dynamic, full-stack portfolio that truly reflects my abilities as a developer."
           techStack={["JavaScript", "React.js", "HTML & CSS", "C#", "ASP.NET", "Vitest", "xUnit"]}
+        />
+
+        <ProjectCard
+          title="The Lost Ember RPG (In Development)"
+          image={lostEmber}
+          alt="Landing Page for Lost Ember RPG"
+          legend="A modular, choice-driven RPG built with modern web technologies – blending dynamic character creation, branching narrative paths, and a lore-rich Codex backend"
+          description="
+          Born from a passion for fantasy storytelling and inspired by tabletop RPGs like Dungeons & Dragons, Lost Ember is a fully-fledged browser-based RPG. 
+          Built from scratch using React and Python Flask, it focuses on narrative depth, meaningful choices, and extensible world-building.
+          "
+          subheading1="Modular Character Creation"
+          subcontent1={[
+            "Players create their character through a multi-step process including:",
+              "- 🌍 Origin, Lineage, and Calling (akin to Race/Class)",
+              "- 📊 Stat allocation with interactive modifiers and point-buy logic",
+              "- 🎓 Foundation-based skill selection and custom proficiencies",
+              "- 🧙 Cantrip selection based on magical aptitude and narrative class",
+              "- 🗡 Finalisation of gear, dialects, and magical flavour",
+              "Each decision updates a real-time build summary and sets the groundwork for future narrative and mechanical branching."
+          ]}
+          subheading2="Scalable Backend & Lore Codex"
+          subcontent2={[
+            "Lost Ember uses a modular Python Flask API with plans to integrate a dedicated Codex microservice, housing:",
+              "- 🌐 Lore entries and worldbuilding data",
+              "- 🧭 Quest tracking and character progression",
+              "- 📚 Spell, dialect, and creature lookups",
+              "A PostgreSQL database powers player saves, branching paths, and dynamic session state – futureproofed for cloud hosting and persistence."
+          ]}
+          summary="Lost Ember is a passion project blending RPG design, narrative systems, and modern web architecture. With a custom engine in progress, it aims to become a unique story-first fantasy RPG – playable entirely in-browser."
+          techStack={["React (Vite)", "JavaScript (ES6+)", "Flask", "Python", "PostgreSQL", "JSON"]}
         />
       
         <ProjectCard 
