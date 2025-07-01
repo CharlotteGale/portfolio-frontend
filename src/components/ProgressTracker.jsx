@@ -1,11 +1,9 @@
 import React from 'react';
 
 const inProgressCerts = [
+    { title: "Building Web Apps with Flask", progress: 81 },
     { title: "Front End Development Libraries", progress: 43 },
-    { title: "Building Web Apps with Django", progress: 15 },
-    { title: "Learn Python 3", progress: 100},
-    { title: "Learn Bash Scripting", progress: 100 },
-    { title: "Learn MongoDB", progress: 100 }
+    { title: "AWS Cloud Practitioner", progress: 23 }
 ];
 
 export default function ProgressTracker() {
