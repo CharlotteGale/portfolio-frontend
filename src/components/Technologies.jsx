@@ -148,6 +148,22 @@ const Languages = () => {
             height="40"
           />
         </a>
+        <a href="https://flask.palletsprojects.com/en/stable/" target="_blank" rel="noreferrer">
+          <img
+            src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/flask/flask-original.svg"
+            alt="Flask"
+            width="40"
+            height="40"
+          />
+        </a>
+        <a href="https://docs.sqlalchemy.org/en/20/orm/" target="_blank" rel="noreferrer">
+          <img
+            src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/sqlalchemy/sqlalchemy-original.svg"
+            alt="SQLAlchemy"
+            width="40"
+            height="40"
+          />
+        </a>
         <a
           href="https://dotnet.microsoft.com/apps/aspnet"
           target="_blank"

@@ -35,6 +35,18 @@ const Tools = () => {
             height="40"
           />
         </a>
+        <a 
+        href="https://docs.aws.amazon.com/"
+        target="_blank"
+        rel="noreferrer"
+        >
+          <img
+            src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/amazonwebservices/amazonwebservices-line-wordmark.svg"
+            alt="AWS"
+            width="40"
+            height="40"
+          />
+        </a>
         <a href="https://postman.com" target="_blank" rel="noreferrer">
           <img
             src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"
