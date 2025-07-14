@@ -15,6 +15,13 @@ const csharpCerts = [
 
 const devOpsCerts = [
     {
+        title: "Cloud Quest: Cloud Practitioner",
+        issuer: "AWS",
+        date: "July 2025",
+        logo: "https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg",
+        link: "https://www.credly.com/badges/672edd38-31d8-44f5-892d-c850b2236cbe/public_url"
+    },
+    {
         title: "Intro to Cloud Computing",
         issuer: "Codecademy",
         date: "January 2025",
