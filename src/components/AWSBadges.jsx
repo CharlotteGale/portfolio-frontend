@@ -1,4 +1,5 @@
 import "../assets/styles/components/AWSBadge.css"
+import awsBadge from "../assets/images/aws-cloud-quest-cloud-practitioner.png"
 
 const AWSBadges = () => {
     return (
@@ -6,7 +7,7 @@ const AWSBadges = () => {
         <h2>AWS Badges</h2>
         <div className="badge-gallery">
             <img 
-                src="/src/assets/images/aws-cloud-quest-cloud-practitioner.png"
+                src={awsBadge}
                 alt="AWS Cloud Practitioner Badge"
             />
         </div>
