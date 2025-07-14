@@ -1,6 +1,6 @@
-import React from 'react';
 import Technologies from '../components/Technologies.jsx';
 import Tools from '../components/Tools.jsx';
+import AWSBadges from '../components/AWSBadges.jsx';
 
 import '../assets/styles/pages/Skills.css'
 
@@ -11,6 +11,7 @@ const Skills = () => {
             <p>Since beginning my transition into tech, I have learned the following skills and technologies via self-learning and CFGs Fullstack Developer Bootcamp.</p>
             <Technologies />
             <Tools />
+            <AWSBadges />
         </section>
     )
 }

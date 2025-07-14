@@ -1,5 +1,3 @@
-import React from "react";
-
 import "../assets/styles/components/Technologies.css";
 
 const Languages = () => {
