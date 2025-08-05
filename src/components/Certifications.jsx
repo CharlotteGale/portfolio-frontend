@@ -100,6 +100,13 @@ const pythonCerts = [
         date: "April 2025",
         logo: "/codecademy-logo.png",
         link: "https://www.codecademy.com/profiles/CharlotteMGale/certificates/6c152bd262967f8c941c9707ed636bda"
+    },
+    {
+        title: "Build Python Web Apps with Flask",
+        issuer: "Codecademy",
+        date: "August 2025",
+        logo: "/codecademy-logo.png",
+        link: "https://www.codecademy.com/profiles/CharlotteMGale/certificates/5ee3bf2c187929001393af70"
     }
 ]
 
